@@ -195,7 +195,7 @@ class FTPService : Service() {
         return NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle("FTP服务启动")
             .setContentText(contentText)
-            .setSmallIcon(R.drawable.star_on) // 替换为你的图标
+            .setSmallIcon(resources.getIdentifier("ic_launcher_ftp", "drawable", packageName)) // 替换为你的图标
             .setContentIntent(pendingIntent)
             .build()
     }

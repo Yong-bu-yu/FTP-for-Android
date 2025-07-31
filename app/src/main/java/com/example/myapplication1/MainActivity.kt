@@ -289,6 +289,8 @@ class MainActivity : ComponentActivity() {
 
             onDispose {
                 connectivityManager.unregisterNetworkCallback(networkCallback)
+                isServerRunning = false
+                stopFtpService()
             }
         }
         Column(
